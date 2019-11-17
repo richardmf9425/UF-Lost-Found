@@ -1,17 +1,16 @@
 /* Navbar */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Roboto, Arial, sans-serif;
-
 }
 
-.navbar {
+.navbar1 {
   position: relative;
   height: 10vh;
   width: 100%;
-
 }
 
 .nav-top {
@@ -24,33 +23,29 @@
   width: 8%;
   height: 100%;
   background: url('./resources/logo.jpg') no-repeat center center/cover;
-
 }
 
 .search-form {
-
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -60px;
-
+  margin-top: -75px;
 }
 
 .search-bar {
   width: 50%;
   border: none;
-  padding: 10px;
+  padding: 15px;
 }
 
 .search-bar::placeholder {
   font-size: 1.3rem;
-
 }
 
 .search-button {
   background: #e17838;
   border: none;
-  padding: 10px 15px;
+  padding: 15px 20px;
   color: white;
   cursor: pointer;
 }
@@ -61,11 +56,23 @@
   text-decoration: none;
   right: 7%;
   margin-top: -25px;
+}
 
+.login:hover {
+  color: #e17838;
+  cursor: pointer;
+}
+
+.login-button {
+  background-color: #e17838;
+  border-color: #e17838;
+}
+
+.login-button:hover {
+  background-color: #084b81;
 }
 
 .nav-bottom {
-
   display: flex;
   height: 40px;
   width: 100%;
@@ -76,9 +83,16 @@
   text-decoration: none;
   list-style: none;
   font-size: 1.2rem;
-
 }
 
+.nav-bottom a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-bottom a:hover {
+  color: #fff;
+}
 
 .landing {
   height: 90vh;
@@ -87,7 +101,6 @@
   margin-top: 10%;
   align-items: center;
   flex-direction: column;
-
 }
 
 .categories-section {
@@ -104,16 +117,26 @@
   flex-wrap: wrap;
 }
 
-
 .category {
   height: 200px;
   width: 200px;
-  background-color: rgb(255, 255, 255);
+  background: url('./resources/pile-of-five-books-51342.jpg') no-repeat center center/cover;
   margin: 20px;
   border: 2px solid #e17838;
 }
 
+.category:hover {
+  box-shadow: 3px 3px 3px #000000;
+  cursor: pointer;
+  transform: scale(1.1);
+}
 
+.text-category {
+  display: flex;
+  justify-content: center;
+  margin-top: 195px;
+  font-size: 1.3rem;
+}
 
 .text-large {
   font-size: 3rem;

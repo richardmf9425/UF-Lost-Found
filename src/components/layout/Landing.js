@@ -6,7 +6,10 @@ function Landing() {
 			<h1 className="text-large">Categories:</h1>
 			<div className="categories-section">
 				<div className="categories">
-					<div className="category" />
+					<div className="category">
+						{' '}
+						<span className="text-category">Books</span>{' '}
+					</div>
 					<div className="category" />
 					<div className="category" />
 					<div className="category" />
