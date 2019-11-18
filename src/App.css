@@ -141,3 +141,19 @@
 .text-large {
   font-size: 3rem;
 }
+
+/* Lost Items */
+
+.items-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+
+td:hover {
+  position: left;
+  cursor: pointer;
+  background-color: #084b81;
+  color: #fff;
+}
