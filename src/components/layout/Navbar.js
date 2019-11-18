@@ -3,6 +3,8 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 
+import { Link } from 'react-router-dom';
+
 function Navbar() {
 	const [ show, setShow ] = useState(false);
 	const [ login, setLogin ] = useState(false);
@@ -19,7 +21,9 @@ function Navbar() {
 		<div>
 			<nav className="navbar1">
 				<div className="nav-top">
-					<div className="logo" />
+					<Link to="/">
+						<div className="logo" />
+					</Link>
 					<form className="search-form">
 						<input type="text" name="" className="search-bar" placeholder="Search for your item" />
 						<button type="submit" className="search-button">
@@ -39,7 +43,7 @@ function Navbar() {
 				<div className="nav-bottom">
 					<li>
 						{' '}
-						<a href="">Lost Items</a>{' '}
+						<Link to="/lostItems">Lost Items</Link>{' '}
 					</li>
 					<li>
 						{' '}
