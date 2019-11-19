@@ -3,7 +3,8 @@ import data from '../../resources/data';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
-
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 toast.configure();
@@ -41,6 +42,8 @@ function LostItems() {
 		});
 	};
 
+	const options = [ 'one', 'two', 'three' ];
+	const defaultOption = options[0];
 	return (
 		<Fragment>
 			<div className="items-table">
@@ -59,7 +62,37 @@ function LostItems() {
 								</table>
 							</div>
 						</div>
-						<div className="column2" />
+						<div className="column2">
+							<h5>Sort By:</h5>
+							<Dropdown
+								className="filter-dropdown"
+								options={options}
+								value={defaultOption}
+								placeholder="Select an option"
+							/>
+							<h5>Color:</h5>
+							<Dropdown
+								className="filter-dropdown"
+								options={options}
+								value={defaultOption}
+								placeholder="Select an option"
+							/>
+							<h5>Area Lost:</h5>
+							<Dropdown
+								className="filter-dropdown"
+								options={options}
+								value={defaultOption}
+								placeholder="Select an option"
+							/>
+							<h5>Item Category:</h5>
+							<Dropdown
+								className="filter-dropdown"
+								options={options}
+								value={defaultOption}
+								placeholder="Select an option"
+							/>
+							<Button className="login-button">Clear</Button>
+						</div>
 					</div>
 				</div>
 			</div>
