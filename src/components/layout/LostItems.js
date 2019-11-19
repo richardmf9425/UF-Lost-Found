@@ -43,6 +43,7 @@ function LostItems() {
 	};
 
 	const options = [ 'one', 'two', 'three' ];
+	const dateOptions = [ 'Newest', 'Oldest' ];
 	const defaultOption = options[0];
 	return (
 		<Fragment>
