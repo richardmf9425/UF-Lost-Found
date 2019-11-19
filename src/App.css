@@ -157,3 +157,21 @@ td:hover {
   background-color: #084b81;
   color: #fff;
 }
+
+
+/* Modal */
+
+.modal-text {
+  background-color: rgb(201, 201, 201);
+  padding: 8px;
+}
+
+.modal-footer {
+  display: inline;
+
+}
+
+.modal-content {
+  border: 4px solid #e17838;
+  /* background-color: red; */
+}
