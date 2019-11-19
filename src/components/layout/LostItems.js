@@ -43,8 +43,10 @@ function LostItems() {
 	};
 
 	const options = [ 'one', 'two', 'three' ];
-	const dateOptions = [ 'Newest', 'Oldest' ];
 	const defaultOption = options[0];
+	const dateOptions = [ 'Newest', 'Oldest' ];
+	const defaultDateOption = dateOptions[0];
+
 	return (
 		<Fragment>
 			<div className="items-table">
@@ -67,8 +69,8 @@ function LostItems() {
 							<h5>Sort By:</h5>
 							<Dropdown
 								className="filter-dropdown"
-								options={options}
-								value={defaultOption}
+								options={dateOptions}
+								value={defaultDateOption}
 								placeholder="Select an option"
 							/>
 							<h5>Color:</h5>
