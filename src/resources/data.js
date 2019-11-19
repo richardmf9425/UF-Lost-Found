@@ -34,7 +34,7 @@ export default [
 		description:
 			'Linear Algebra book, white and green cover with some numbers, also has a barcode sticker on the back from thriftbooks',
 		color: 'white',
-		location: 'Marston Library',
+		location: 'NEB',
 		category: 'Phones',
 		date: 'Nov-17-2019'
 	},
