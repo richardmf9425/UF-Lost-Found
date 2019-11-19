@@ -36,7 +36,7 @@ export default [
 		color: 'white',
 		location: 'NEB',
 		category: 'Phones',
-		date: 'Nov-17-2019'
+		date: 'July-25-2019'
 	},
 	{
 		id: 5,
