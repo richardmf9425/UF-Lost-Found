@@ -145,9 +145,9 @@
 /* Lost Items */
 
 .items-table {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   margin-top: 10%;
 }
 
@@ -156,6 +156,20 @@ td:hover {
   cursor: pointer;
   background-color: #084b81;
   color: #fff;
+}
+
+.column1 {
+  float: right;
+  width: 70%;
+  padding: 10px;
+  margin-left: 20%;
+}
+
+.column2 {
+  margin-top: -28%;
+  width: 20%;
+  padding: 20px;
+  background-color: #ccdef9;
 }
 
 
@@ -173,5 +187,13 @@ td:hover {
 
 .modal-content {
   border: 4px solid #e17838;
+  padding: 10px;
   /* background-color: red; */
+}
+
+
+/* Toast */
+.toast-background {
+  padding: 20px;
+
 }

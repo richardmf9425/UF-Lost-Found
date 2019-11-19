@@ -4,6 +4,9 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+toast.configure();
 function LostItems() {
 	const [ show, setShow ] = useState(false);
 	const [ item, setItem ] = useState({});
@@ -27,6 +30,15 @@ function LostItems() {
 		e.preventDefault();
 
 		handleClose();
+		toast.success('Owner has been notified and should contact you soon! Thank you!', {
+			bodyClassName: 'toast-background',
+			position: 'top-left',
+			autoClose: 4000,
+			hideProgressBar: true,
+			closeOnClick: true,
+			pauseOnHover: false,
+			draggable: true
+		});
 	};
 
 	return (
@@ -47,10 +59,12 @@ function LostItems() {
 								</table>
 							</div>
 						</div>
+						<div className="column2" />
 					</div>
 				</div>
 			</div>
-			<Modal show={show} onHide={handleClose} contentClassName="modal-content">
+
+			<Modal show={show} onHide={handleClose}>
 				<Modal.Header closeButton>
 					<Modal.Title>
 						Lost Item: <br /> <span className="modal-text">{item.title}</span>
