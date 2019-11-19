@@ -45,6 +45,6 @@ export default [
 		color: 'white',
 		location: 'Marston Library',
 		category: 'Phones',
-		date: 'Nov-17-2019'
+		date: 'Oct-08-2019'
 	}
 ];
