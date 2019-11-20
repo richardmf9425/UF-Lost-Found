@@ -42,8 +42,8 @@ function LostItems({ data }) {
 		});
 	};
 
-	const options = [ 'one', 'two', 'three' ];
-	const defaultOption = options[0];
+	const colorOptions = [ 'Yellow', 'Red', 'Black', 'Blue' ];
+	const defaultColorOption = colorOptions[0];
 	const dateOptions = [ 'Newest', 'Oldest' ];
 	const defaultDateOption = dateOptions[0];
 
@@ -76,7 +76,7 @@ function LostItems({ data }) {
 							<h5>Color:</h5>
 							<Dropdown
 								className="filter-dropdown"
-								options={options}
+								options={colorOptions}
 								value={defaultOption}
 								placeholder="Select an option"
 							/>
