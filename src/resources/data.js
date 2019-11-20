@@ -22,7 +22,7 @@ export default [
 		id: 3,
 		title: 'Hydroflask',
 		description:
-			'Blue hydroflask bottle with a nasa sticker in the front, middle size, left it in E221 room in the cise building',
+			'Blue hydroflask bottle with a nasa sticker in the front, middle size, left it in E221 room in the CISE building',
 		color: 'blue',
 		location: 'Marston Library',
 		category: 'Phones',
