@@ -1,5 +1,5 @@
 import React, { useState, Fragment } from 'react';
-import data from '../../resources/data';
+
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
@@ -8,7 +8,7 @@ import 'react-dropdown/style.css';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 toast.configure();
-function LostItems() {
+function LostItems({ data }) {
 	const [ show, setShow ] = useState(false);
 	const [ item, setItem ] = useState({});
 

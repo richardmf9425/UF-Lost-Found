@@ -197,6 +197,28 @@ td:hover {
 }
 
 /* Toast */
+
 .toast-background {
 	padding: 20px;
+}
+
+/* Add Lost Item Form */
+
+.lost-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 100px;
+}
+
+.lost-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	margin: 15px;
 }
