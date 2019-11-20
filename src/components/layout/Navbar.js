@@ -50,7 +50,7 @@ function Navbar() {
 						<a href="">Found Items</a>{' '}
 					</li>
 					<li>
-						<a href=""> Lost an item?</a>{' '}
+						<Link to="/addLost">Lost an Item?</Link>{' '}
 					</li>
 					<li>
 						{' '}
