@@ -17,7 +17,7 @@ function LostItems({ data }) {
 		setShow(true);
 		setItem(item);
 	};
-
+	console.log(data);
 	const itemsList = data.map((item) => {
 		return (
 			<tr key={item.id} onClick={() => handleShow(item)}>
