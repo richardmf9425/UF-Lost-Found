@@ -46,6 +46,8 @@ function LostItems({ data }) {
 	const defaultColorOption = colorOptions[0];
 	const locationOptions = [ 'Marston', 'CISE', 'Reitz', 'Campus', 'Other' ];
 	const defaultLocationOption = locationOptions[0];
+	const categoryOptions = [ 'Book', 'Phone', 'Emergency', 'Accessory', 'Other' ];
+	const defaultCategoryOption = categoryOptions[0];
 	const dateOptions = [ 'Newest', 'Oldest' ];
 	const defaultDateOption = dateOptions[0];
 
@@ -92,8 +94,8 @@ function LostItems({ data }) {
 							<h5>Item Category:</h5>
 							<Dropdown
 								className="filter-dropdown"
-								options={options}
-								value={defaultOption}
+								options={categoryOptions}
+								value={defaultCategoryOption}
 								placeholder="Select an option"
 							/>
 							<Button className="login-button">Clear</Button>
