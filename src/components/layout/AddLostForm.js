@@ -3,32 +3,49 @@ import Dropdown from 'react-dropdown';
 import uuid from 'uuid/v4';
 
 import 'react-dropdown/style.css';
-
+import { Redirect } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
-
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+toast.configure();
 function AddLostForm({ data, addItem }) {
 	const [ formInfo, setFormInfo ] = useState({
+		title: '',
 		description: '',
 		color: '',
 		location: '',
 		category: '',
 		email: ''
 	});
-	const { description, color, location, category, email } = formInfo;
+	const [ fireRedirect, setFireRedirect ] = useState(false);
+	const { title, description, color, location, category, email } = formInfo;
 	const onChange = (e) => setFormInfo({ ...formInfo, [e.target.name]: e.target.value });
 	const onSubmit = (e) => {
 		const id = uuid();
+		const date = new Date();
 		const newItem = {
 			id,
+			title,
 			description,
 			color,
 			location,
 			category,
-			email
+			email,
+			date: date.toDateString()
 		};
 
 		e.preventDefault();
 		addItem([ ...data, newItem ]);
+		toast.success('Your lost item has been successfully added!', {
+			bodyClassName: 'toast-background',
+			position: 'top-left',
+			autoClose: 4000,
+			hideProgressBar: true,
+			closeOnClick: true,
+			pauseOnHover: false,
+			draggable: true
+		});
+		setFireRedirect(true);
 	};
 
 	const onColorSelect = (color) => setFormInfo({ ...formInfo, color: color.value });
@@ -42,6 +59,18 @@ function AddLostForm({ data, addItem }) {
 		<div className="lost-section">
 			<h3> Add Lost Item:</h3>
 			<form className="lost-form" onSubmit={(e) => onSubmit(e)}>
+				<div className="form-group">
+					<label htmlFor="title">Item:</label>
+					<input
+						id="title"
+						type="text"
+						name="title"
+						value={title}
+						required
+						placeholder="coffee mug"
+						onChange={(e) => onChange(e)}
+					/>
+				</div>
 				<div className="form-group">
 					<label htmlFor="description"> Provide a description of the item:</label>
 					<textarea
@@ -95,6 +124,7 @@ function AddLostForm({ data, addItem }) {
 					Add Lost Item
 				</Button>
 			</form>
+			{fireRedirect && <Redirect to="/lostItems" />}
 		</div>
 	);
 }

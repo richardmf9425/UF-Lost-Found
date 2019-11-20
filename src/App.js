@@ -10,7 +10,7 @@ import AddLostForm from './components/layout/AddLostForm';
 function App() {
 	const [ data, setData ] = useState(list);
 
-	const addItem = (newList) => setData({ data: newList });
+	const addItem = (newList) => setData(newList);
 	return (
 		<Router>
 			<div>

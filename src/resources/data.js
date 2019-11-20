@@ -6,17 +6,17 @@ export default [
 		color: 'black',
 		location: 'Marston Library',
 		category: 'Phones',
-		date: 'Nov-17-2019'
+		date: 'Sun Nov 17 2019'
 	},
 	{
 		id: 2,
 		title: 'Umbrella',
 		description:
-			'Black umbrella with pink flowers, I think I left it in a table in the basement at Marston Library',
+			'Black umbrella with pink flowers, I think I left it in a table in the basement at Marston Library, close to Wu study room',
 		color: 'black',
 		location: 'Marston Library',
 		category: 'Phones',
-		date: 'Nov-17-2019'
+		date: 'Mon Nov 18 2019'
 	},
 	{
 		id: 3,
@@ -26,7 +26,7 @@ export default [
 		color: 'blue',
 		location: 'Marston Library',
 		category: 'Phones',
-		date: 'Nov-17-2019'
+		date: 'Wed Oct 22 2019'
 	},
 	{
 		id: 4,
@@ -36,7 +36,7 @@ export default [
 		color: 'white',
 		location: 'NEB',
 		category: 'Phones',
-		date: 'July-25-2019'
+		date: 'Mon Jul 17 2019'
 	},
 	{
 		id: 5,
@@ -45,6 +45,6 @@ export default [
 		color: 'white',
 		location: 'Marston Library',
 		category: 'Phones',
-		date: 'Oct-08-2019'
+		date: 'Wed Jan 21 2019'
 	}
 ];

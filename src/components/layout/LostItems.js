@@ -22,7 +22,7 @@ function LostItems({ data }) {
 		return (
 			<tr key={item.id} onClick={() => handleShow(item)}>
 				<td>{item.title}</td>
-				<td>{`${item.description.slice(0, 70)}...`}</td>
+				<td>{item.description.length > 100 ? `${item.description.slice(0, 70)}...` : item.description}</td>
 				<td>{item.date}</td>
 			</tr>
 		);
