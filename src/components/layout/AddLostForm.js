@@ -56,7 +56,7 @@ function AddLostForm({ data, addItem }) {
 	const locationOptions = [ 'Marston', 'CISE', 'Reitz', 'Other' ];
 	const categoryOptions = [ 'Book', 'Phone', 'Accessory', 'Emergency' ];
 	return (
-		<div className="lost-section">
+		<div className="lost-section card shadow p-3 mb-5 bg-white rounded">
 			<h3> Add Lost Item:</h3>
 			<form className="lost-form" onSubmit={(e) => onSubmit(e)}>
 				<div className="form-group">

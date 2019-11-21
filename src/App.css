@@ -210,6 +210,8 @@ td:hover {
 	align-items: center;
 	flex-direction: column;
 	margin-top: 100px;
+	width: 550px;
+	margin-left: 30%;
 }
 
 .lost-form {
