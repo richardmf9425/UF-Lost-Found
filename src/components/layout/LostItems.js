@@ -56,7 +56,7 @@ function LostItems({ data }) {
 			<div className="items-table">
 				<div className="table-headers">
 					<div className="row">
-						<div className="column1">
+						<div className="column1 card shadow">
 							<div className="tableWrapper">
 								<h1>Lost Items</h1>
 								<table className="table table-striped">

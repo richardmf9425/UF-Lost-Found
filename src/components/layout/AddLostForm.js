@@ -56,11 +56,13 @@ function AddLostForm({ data, addItem }) {
 	const locationOptions = [ 'Marston', 'CISE', 'Reitz', 'Other' ];
 	const categoryOptions = [ 'Book', 'Phone', 'Accessory', 'Emergency' ];
 	return (
-		<div className="lost-section card shadow p-3 mb-5 bg-white rounded">
+		<div className="lost-section card shadow-lg p-3 mb-5 bg-white rounded">
 			<h3> Add Lost Item:</h3>
 			<form className="lost-form" onSubmit={(e) => onSubmit(e)}>
 				<div className="form-group">
-					<label htmlFor="title">Item:</label>
+					<label htmlFor="title">
+						<b>Item:</b>{' '}
+					</label>
 					<input
 						id="title"
 						type="text"
@@ -72,7 +74,9 @@ function AddLostForm({ data, addItem }) {
 					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor="description"> Provide a description of the item:</label>
+					<label htmlFor="description">
+						<b>Provide a description of the item:</b>{' '}
+					</label>
 					<textarea
 						id="description"
 						name="description"
@@ -84,31 +88,48 @@ function AddLostForm({ data, addItem }) {
 					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor="color">What color is the item?</label>
-					<Dropdown id="color" name="color" value={color} options={colorOptions} onChange={onColorSelect} />
+					<label htmlFor="color">
+						<b>What color is the item?</b>{' '}
+					</label>
+					<Dropdown
+						id="color"
+						name="color"
+						value={color}
+						options={colorOptions}
+						onChange={onColorSelect}
+						className="dropdown"
+					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor="location">Where did you lose this item or last saw it?</label>
+					<label htmlFor="location">
+						<b>Where did you lose this item or last saw it?</b>{' '}
+					</label>
 					<Dropdown
 						id="location"
 						name="location"
 						value={location}
 						options={locationOptions}
 						onChange={onLocationSelect}
+						className="dropdown"
 					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor="category">Item Category:</label>
+					<label htmlFor="category">
+						<b>Item Category:</b>{' '}
+					</label>
 					<Dropdown
 						id="category"
 						name="category"
 						value={category}
 						options={categoryOptions}
 						onChange={onCategorySelect}
+						className="dropdown"
 					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor="email">Preferred contact email:</label>
+					<label htmlFor="email">
+						<b>Preferred contact email:</b>{' '}
+					</label>
 					<input
 						id="color"
 						type="email"

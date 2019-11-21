@@ -7,6 +7,10 @@
 	font-family: Roboto, Arial, sans-serif;
 }
 
+input:focus, select:focus, textarea:focus, button:focus {
+	outline: none;
+}
+
 .navbar1 {
 	position: relative;
 	height: 10vh;
@@ -223,4 +227,17 @@ td:hover {
 	display: flex;
 	flex-direction: column;
 	margin: 15px;
+}
+
+.lost-form input[type=text], input[type=email] {
+	border: none;
+	border-bottom: 1px solid #e17838;
+}
+
+.lost-form textarea {
+	border: 1px solid #e17838;
+}
+
+.dropdown {
+	border: 1px solid #e17838;
 }
