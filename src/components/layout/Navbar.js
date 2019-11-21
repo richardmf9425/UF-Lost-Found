@@ -42,15 +42,7 @@ function Navbar() {
 				</div>
 				<div className="nav-bottom">
 					<li>
-						{' '}
-						<Link to="/lostItems">Lost Items</Link>{' '}
-					</li>
-					<li>
-						{' '}
-						<a href="">Found Items</a>{' '}
-					</li>
-					<li>
-						<Link to="/addLost">Lost an Item?</Link>{' '}
+						<Link to="/lostItems">Lost an Item?</Link>{' '}
 					</li>
 					<li>
 						{' '}
@@ -73,13 +65,19 @@ function Navbar() {
 					</Modal.Header>
 					<Modal.Body>
 						<Form.Group controlId="formBasicEmail">
-							<Form.Label> UF Email address</Form.Label>
+							<Form.Label>
+								{' '}
+								<b> UF Email address</b>
+							</Form.Label>
 							<Form.Control required type="email" placeholder="Enter email" />
 							<Form.Text className="text-muted">We'll never share your email with anyone else.</Form.Text>
 						</Form.Group>
 
 						<Form.Group controlId="formBasicPassword">
-							<Form.Label> UF Password</Form.Label>
+							<Form.Label>
+								{' '}
+								<b>UF Password</b>{' '}
+							</Form.Label>
 							<Form.Control required type="password" placeholder="Password" />
 						</Form.Group>
 					</Modal.Body>

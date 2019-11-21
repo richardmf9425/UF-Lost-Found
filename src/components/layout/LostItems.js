@@ -7,6 +7,7 @@ import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from 'react-router-dom';
 toast.configure();
 function LostItems({ data }) {
 	const [ show, setShow ] = useState(false);
@@ -53,6 +54,14 @@ function LostItems({ data }) {
 
 	return (
 		<Fragment>
+			<div className="add-section">
+				<h5 className="add-text">Don't see your item? Add it</h5>{' '}
+				<span>
+					<Link to="/addLost" className="">
+						<i class="fas fa-plus-circle add-icon" />
+					</Link>
+				</span>
+			</div>
 			<div className="items-table">
 				<div className="table-headers">
 					<div className="row">
@@ -69,7 +78,7 @@ function LostItems({ data }) {
 								</table>
 							</div>
 						</div>
-						<div className="column2">
+						<div className="column2 ">
 							<h5>Sort By:</h5>
 							<Dropdown
 								className="filter-dropdown"
