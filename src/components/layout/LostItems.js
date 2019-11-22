@@ -16,6 +16,7 @@ function LostItems({ data }) {
 	const [ color, setColor ] = useState('');
 	const [ location, setLocation ] = useState('');
 	const [ category, setCategory ] = useState('');
+	const [ searchText, setSearchText ] = useState('');
 
 	const handleClose = () => setShow(false);
 	const handleShow = (item) => {
@@ -37,6 +38,13 @@ function LostItems({ data }) {
 	if (category) {
 		data = data.filter((item) => item.category === category);
 	}
+
+	if (searchText) {
+		data = data.filter(
+			(item) =>
+				item.title.toLowerCase().includes(searchText) || item.description.toLowerCase().includes(searchText)
+		);
+	}
 	const itemsList = data.map((item) => {
 		return (
 			<tr key={item.id} onClick={() => handleShow(item)}>
@@ -52,6 +60,9 @@ function LostItems({ data }) {
 		setCategory('');
 		setColor('');
 		setLocation('');
+	};
+	const onSearch = (text) => {
+		setSearchText(text);
 	};
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -90,7 +101,13 @@ function LostItems({ data }) {
 		<Fragment>
 			<div className="search-section">
 				<form className="search-form">
-					<input type="text" name="" className="search-bar" placeholder="Search for your item" />
+					<input
+						type="text"
+						name=""
+						className="search-bar"
+						placeholder="Search for your item"
+						onChange={(e) => onSearch(e.target.value)}
+					/>
 					<button type="submit" className="search-button">
 						<i className="fas fa-search" />
 					</button>
