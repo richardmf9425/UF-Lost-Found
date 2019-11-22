@@ -12,6 +12,10 @@ toast.configure();
 function LostItems({ data }) {
 	const [ show, setShow ] = useState(false);
 	const [ item, setItem ] = useState({});
+	const [ newest, setNewest ] = useState(true);
+	const [ color, setColor ] = useState('');
+	const [ location, setLocation ] = useState('');
+	const [ category, setCategory ] = useState('');
 
 	const handleClose = () => setShow(false);
 	const handleShow = (item) => {
@@ -19,15 +23,36 @@ function LostItems({ data }) {
 		setItem(item);
 	};
 	console.log(data);
+	if (newest) {
+		data.sort((a, b) => new Date(b.date) - new Date(a.date));
+	} else {
+		data.sort((a, b) => new Date(a.date) - new Date(b.date));
+	}
+	if (color) {
+		data = data.filter((item) => item.color === color);
+	}
+	if (location) {
+		data = data.filter((item) => item.location === location);
+	}
+	if (category) {
+		data = data.filter((item) => item.category === category);
+	}
 	const itemsList = data.map((item) => {
 		return (
 			<tr key={item.id} onClick={() => handleShow(item)}>
 				<td>{item.title}</td>
 				<td>{item.description.length > 100 ? `${item.description.slice(0, 70)}...` : item.description}</td>
-				<td>{item.date}</td>
+				<td>{new Date(item.date).toDateString()}</td>
 			</tr>
 		);
 	});
+
+	const clearState = () => {
+		setNewest(true);
+		setCategory('');
+		setColor('');
+		setLocation('');
+	};
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
@@ -43,15 +68,24 @@ function LostItems({ data }) {
 		});
 	};
 
-	const colorOptions = [ 'Yellow', 'Red', 'Black', 'Blue' ];
-	const defaultColorOption = colorOptions[0];
+	const colorOptions = [ 'Yellow', 'Red', 'Black', 'Blue', 'White' ];
+
 	const locationOptions = [ 'Marston', 'CISE', 'Reitz', 'Campus', 'Other' ];
-	const defaultLocationOption = locationOptions[0];
-	const categoryOptions = [ 'Book', 'Phone', 'Emergency', 'Accessory', 'Other' ];
-	const defaultCategoryOption = categoryOptions[0];
+
+	const categoryOptions = [ 'Books', 'Phones', 'Emergency', 'Accessories', 'ID', 'Other' ];
+
 	const dateOptions = [ 'Newest', 'Oldest' ];
 	const defaultDateOption = dateOptions[0];
 
+	const onDateSelect = () => {
+		setNewest(!newest);
+	};
+
+	const onColorSelect = (color) => {
+		setColor(color.value);
+	};
+	const onCategorySelect = (category) => setCategory(category.value);
+	const onLocationSelect = (location) => setLocation(location.value);
 	return (
 		<Fragment>
 			<div className="add-section">
@@ -67,7 +101,7 @@ function LostItems({ data }) {
 					<div className="row">
 						<div className="column1 card shadow">
 							<div className="tableWrapper">
-								<h1>Lost Items</h1>
+								<h1>Items Lost</h1>
 								<table className="table table-striped">
 									<thead>
 										<td>Item:</td>
@@ -84,30 +118,36 @@ function LostItems({ data }) {
 								className="filter-dropdown"
 								options={dateOptions}
 								value={defaultDateOption}
-								placeholder="Select an option"
+								placeholder="Select.."
+								onChange={onDateSelect}
 							/>
 							<h5>Color:</h5>
 							<Dropdown
 								className="filter-dropdown"
 								options={colorOptions}
-								value={defaultColorOption}
-								placeholder="Select an option"
+								value={color}
+								placeholder="Select..."
+								onChange={onColorSelect}
 							/>
 							<h5>Area Lost:</h5>
 							<Dropdown
 								className="filter-dropdown"
 								options={locationOptions}
-								value={defaultLocationOption}
-								placeholder="Select an option"
+								value={location}
+								placeholder="Select..."
+								onChange={onLocationSelect}
 							/>
 							<h5>Item Category:</h5>
 							<Dropdown
 								className="filter-dropdown"
 								options={categoryOptions}
-								value={defaultCategoryOption}
-								placeholder="Select an option"
+								value={category}
+								placeholder="Select..."
+								onChange={onCategorySelect}
 							/>
-							<Button className="login-button">Clear</Button>
+							<Button className="login-button clear-button" onClick={clearState}>
+								Clear
+							</Button>
 						</div>
 					</div>
 				</div>

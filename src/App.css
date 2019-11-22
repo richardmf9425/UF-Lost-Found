@@ -209,6 +209,11 @@ td:hover {
 	width: 140px;
 }
 
+.clear-button {
+	margin-top: 10px;
+	margin-left: 80px;
+}
+
 /* Modal */
 
 .modal-text {

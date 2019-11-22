@@ -46,7 +46,7 @@ function Navbar() {
 					</li>
 					<li>
 						{' '}
-						<a href="">Found an item?</a>{' '}
+						<Link to="/lostItems">Found an item?</Link>{' '}
 					</li>
 					<li>
 						{' '}
