@@ -24,12 +24,7 @@ function Navbar() {
 					<Link to="/">
 						<div className="logo" />
 					</Link>
-					<form className="search-form">
-						<input type="text" name="" className="search-bar" placeholder="Search for your item" />
-						<button type="submit" className="search-button">
-							<i className="fas fa-search" />
-						</button>
-					</form>
+					<span className="slogan">Lost and Found</span>
 					<div href="" className="login" onClick={handleShow}>
 						{login ? (
 							'Welcome, Richard'

@@ -22,7 +22,7 @@ function LostItems({ data }) {
 		setShow(true);
 		setItem(item);
 	};
-	console.log(data);
+
 	if (newest) {
 		data.sort((a, b) => new Date(b.date) - new Date(a.date));
 	} else {
@@ -88,6 +88,14 @@ function LostItems({ data }) {
 	const onLocationSelect = (location) => setLocation(location.value);
 	return (
 		<Fragment>
+			<div className="search-section">
+				<form className="search-form">
+					<input type="text" name="" className="search-bar" placeholder="Search for your item" />
+					<button type="submit" className="search-button">
+						<i className="fas fa-search" />
+					</button>
+				</form>
+			</div>
 			<div className="add-section">
 				<h5 className="add-text">Don't see your item? Add it</h5>{' '}
 				<span>
@@ -166,7 +174,10 @@ function LostItems({ data }) {
 				</Modal.Body>
 				<Modal.Footer className="modal-footer">
 					<Form onSubmit={handleSubmit}>
-						<Form.Label> Did you find this item?</Form.Label>
+						<Form.Label>
+							{' '}
+							<b>Did you find this item?</b>{' '}
+						</Form.Label>
 						<Form.Control required type="email" placeholder="Enter preferred contact info" />
 						<Form.Text className="text-muted">
 							We'll never share your information with anyone else.
