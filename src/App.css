@@ -112,11 +112,11 @@ input:focus, select:focus, textarea:focus, button:focus {
 
 .nav-bottom a {
 	text-decoration: none;
-	color: inherit;
+	color: #fff;
 }
 
 .nav-bottom a:hover {
-	color: #fff;
+	color: #084b81;
 }
 
 .landing {
@@ -284,15 +284,43 @@ td:hover {
 
 .lost-form input[type=text], input[type=email], input[type=password] {
 	border: none;
-	border-bottom: 1px solid #e17838;
+	border-bottom: 1px solid #fd6100;
 }
 
 .lost-form textarea {
-	border: 1px solid #e17838;
+	border: 1px solid #fd6100;
 	width: 350px;
 	height: 150px;
 }
 
 .dropdown {
 	border: 1px solid #e17838;
+}
+
+.form-buttons {
+	display: flex;
+	width: 280px;
+	margin: 20px;
+	margin-left: 110px;
+}
+
+.add-lost-button {
+	width: 130px;
+	margin-left: 40px;
+}
+
+.cancel-button {
+	background-color: #929292;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	border-radius: 5px;
+}
+
+.cancel-button:hover {
+	background-color: rgb(207, 26, 26);
+	text-decoration: none;
+	color: white;
 }

@@ -3,7 +3,7 @@ import Dropdown from 'react-dropdown';
 import uuid from 'uuid/v4';
 
 import 'react-dropdown/style.css';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -60,9 +60,7 @@ function AddLostForm({ data, addItem }) {
 			<h3> Add Lost Item:</h3>
 			<form className="lost-form" onSubmit={(e) => onSubmit(e)}>
 				<div className="form-group">
-					<label htmlFor="title">
-						<b>Item:</b>{' '}
-					</label>
+					<label htmlFor="title">Item: </label>
 					<input
 						id="title"
 						type="text"
@@ -74,9 +72,7 @@ function AddLostForm({ data, addItem }) {
 					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor="description">
-						<b>Provide a description of the item:</b>{' '}
-					</label>
+					<label htmlFor="description">Provide a description of the item: </label>
 					<textarea
 						id="description"
 						name="description"
@@ -88,48 +84,40 @@ function AddLostForm({ data, addItem }) {
 					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor="color">
-						<b>What color is the item?</b>{' '}
-					</label>
+					<label htmlFor="color">What color is the item? </label>
 					<Dropdown
 						id="color"
 						name="color"
 						value={color}
 						options={colorOptions}
 						onChange={onColorSelect}
-						className="dropdown"
+						className="filter-dropdown"
 					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor="location">
-						<b>Where did you lose this item or last saw it?</b>{' '}
-					</label>
+					<label htmlFor="location">Where did you lose this item or last saw it? </label>
 					<Dropdown
 						id="location"
 						name="location"
 						value={location}
 						options={locationOptions}
 						onChange={onLocationSelect}
-						className="dropdown"
+						className="filter-dropdown"
 					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor="category">
-						<b>Item Category:</b>{' '}
-					</label>
+					<label htmlFor="category">Item Category: </label>
 					<Dropdown
 						id="category"
 						name="category"
 						value={category}
 						options={categoryOptions}
 						onChange={onCategorySelect}
-						className="dropdown"
+						className="filter-dropdown"
 					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor="email">
-						<b>Preferred contact email:</b>{' '}
-					</label>
+					<label htmlFor="email">Preferred contact email: </label>
 					<input
 						id="color"
 						type="email"
@@ -140,10 +128,15 @@ function AddLostForm({ data, addItem }) {
 						onChange={(e) => onChange(e)}
 					/>
 				</div>
+				<div className="form-buttons">
+					<Link to="/lostItems" className="login-button add-lost-button cancel-button">
+						Cancel
+					</Link>
 
-				<Button className="login-button" type="submit">
-					Add Lost Item
-				</Button>
+					<Button className="login-button add-lost-button" type="submit">
+						Add Item
+					</Button>
+				</div>
 			</form>
 			{fireRedirect && <Redirect to="/lostItems" />}
 		</div>
