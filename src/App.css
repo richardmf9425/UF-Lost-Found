@@ -48,29 +48,30 @@ input:focus, select:focus, textarea:focus, button:focus {
 
 .search-bar {
 	width: 40%;
-	border: 1px solid #eeeeee;
-	border-radius: 25px;
+	border: none;
+	border-bottom: 2px solid #084b81;
+	/* border-radius: 25px; */
 	padding: 10px;
-	background-color: #eeeeee;
+	/* background-color: #eeeeee; */
 }
 
 .search-bar::placeholder {
 	font-size: 1.3rem;
-	color: #888888;
+	color: #bbbbbb;
 }
 
-.search-bar:focus {
+/* .search-bar:focus {
 	background-color: #f5f5f5;
-}
+} */
 
 .search-button {
 	position: absolute;
-	background: #e17838;
+	/* background: #e17838; */
 	border: none;
-	border-radius: 0px 40px 40px 0px;
-	padding: 11px 20px;
-	left: 952px;
-	color: white;
+	/* border-radius: 0px 40px 40px 0px; */
+	padding: 9px 10px;
+	left: 962px;
+	color: #084b81;
 	cursor: pointer;
 }
 
