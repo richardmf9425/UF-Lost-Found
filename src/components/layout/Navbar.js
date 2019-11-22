@@ -37,7 +37,7 @@ function Navbar() {
 				</div>
 				<div className="nav-bottom">
 					<li>
-						<Link to="/lostItems">Lost an Item?</Link>{' '}
+						<Link to="/foundItems">Lost an Item?</Link>{' '}
 					</li>
 					<li>
 						{' '}

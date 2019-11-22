@@ -7,6 +7,7 @@ import Navbar from './components/layout/Navbar';
 import LostItems from './components/layout/LostItems';
 import list from './resources/data';
 import AddLostForm from './components/layout/AddLostForm';
+import FoundItems from './components/layout/FoundItems';
 function App() {
 	const [ data, setData ] = useState(list);
 
@@ -17,6 +18,7 @@ function App() {
 				<Navbar />
 				<Route exact path="/" component={Landing} />
 				<Route exact path="/lostItems" render={(props) => <LostItems {...props} data={data} />} />
+				<Route exact path="/foundItems" render={(props) => <FoundItems {...props} data={data} />} />
 				<Route
 					exact
 					path="/addLost"
