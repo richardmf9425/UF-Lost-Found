@@ -114,9 +114,9 @@ function LostItems({ data }) {
 				</form>
 			</div>
 			<div className="add-section">
-				<h5 className="add-text">Don't see your item? Add it</h5>{' '}
+				<h5 className="add-text">Don't see the item? Add it</h5>{' '}
 				<span>
-					<Link to="/addLost" className="">
+					<Link to="/addFound" className="">
 						<i class="fas fa-plus-circle add-icon" />
 					</Link>
 				</span>
@@ -127,6 +127,10 @@ function LostItems({ data }) {
 						<div className="column1 card shadow">
 							<div className="tableWrapper">
 								<h1>Items Lost</h1>
+								<p>
+									<span className="star-red">*</span>List of items claimed as Lost by students and
+									staff in UF campus.
+								</p>
 								<table className="table table-striped">
 									<thead>
 										<td>Item:</td>

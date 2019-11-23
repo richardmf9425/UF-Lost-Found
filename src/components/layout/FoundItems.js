@@ -9,7 +9,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom';
 toast.configure();
-function FoundItems({ data }) {
+function FoundItems({ dataf }) {
 	const [ show, setShow ] = useState(false);
 	const [ item, setItem ] = useState({});
 	const [ newest, setNewest ] = useState(true);
@@ -25,27 +25,27 @@ function FoundItems({ data }) {
 	};
 
 	if (newest) {
-		data.sort((a, b) => new Date(b.date) - new Date(a.date));
+		dataf.sort((a, b) => new Date(b.date) - new Date(a.date));
 	} else {
-		data.sort((a, b) => new Date(a.date) - new Date(b.date));
+		dataf.sort((a, b) => new Date(a.date) - new Date(b.date));
 	}
 	if (color) {
-		data = data.filter((item) => item.color === color);
+		dataf = dataf.filter((item) => item.color === color);
 	}
 	if (location) {
-		data = data.filter((item) => item.location === location);
+		dataf = dataf.filter((item) => item.location === location);
 	}
 	if (category) {
-		data = data.filter((item) => item.category === category);
+		dataf = dataf.filter((item) => item.category === category);
 	}
 
 	if (searchText) {
-		data = data.filter(
+		dataf = dataf.filter(
 			(item) =>
 				item.title.toLowerCase().includes(searchText) || item.description.toLowerCase().includes(searchText)
 		);
 	}
-	const itemsList = data.map((item) => {
+	const itemsList = dataf.map((item) => {
 		return (
 			<tr key={item.id} onClick={() => handleShow(item)}>
 				<td>{item.title}</td>
@@ -114,7 +114,7 @@ function FoundItems({ data }) {
 				</form>
 			</div>
 			<div className="add-section">
-				<h5 className="add-text">Don't see your item? Add it</h5>{' '}
+				<h6 className="add-text">Don't see your item? Add it to 'Lost Items' List</h6>{' '}
 				<span>
 					<Link to="/addLost" className="">
 						<i class="fas fa-plus-circle add-icon" />
@@ -127,6 +127,10 @@ function FoundItems({ data }) {
 						<div className="column1 card shadow">
 							<div className="tableWrapper">
 								<h1>Items Found</h1>
+								<p>
+									<span className="star-red">*</span> This is a list of items found by students and
+									staff in UF campus.
+								</p>
 								<table className="table table-striped">
 									<thead>
 										<td>Item:</td>
