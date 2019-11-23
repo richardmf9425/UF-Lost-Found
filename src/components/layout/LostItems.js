@@ -204,7 +204,7 @@ function LostItems({ data }) {
 							We'll never share your information with anyone else.
 						</Form.Text>
 
-						<Button className="login-button" type="submit">
+						<Button className="login-button " type="submit">
 							Notify Owner
 						</Button>
 					</Form>

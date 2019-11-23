@@ -197,16 +197,16 @@ function FoundItems({ dataf }) {
 					<Form onSubmit={handleSubmit}>
 						<Form.Label>
 							{' '}
-							<b>Did you find this item?</b>{' '}
+							<b>Is this item yours?</b>{' '}
 						</Form.Label>
-						<Form.Control required type="email" placeholder="Enter preferred contact info" />
+						{/* <Form.Control required type="email" placeholder="Enter preferred contact info" />
 						<Form.Text className="text-muted">
 							We'll never share your information with anyone else.
-						</Form.Text>
+						</Form.Text> */}
 
-						<Button className="login-button" type="submit">
-							Notify Owner
-						</Button>
+						<Link className="login-button modal-button" to="/claim">
+							Claim Item
+						</Link>
 					</Form>
 				</Modal.Footer>
 			</Modal>

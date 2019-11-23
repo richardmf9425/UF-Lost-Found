@@ -10,6 +10,7 @@ import listf from './resources/dataf';
 import AddLostForm from './components/layout/AddLostForm';
 import AddFoundForm from './components/layout/AddFoundForm';
 import FoundItems from './components/layout/FoundItems';
+import ClaimForm from './components/layout/ClaimForm';
 function App() {
 	const [ data, setData ] = useState(list);
 	const [ dataf, setDataf ] = useState(listf);
@@ -23,6 +24,7 @@ function App() {
 				<Route exact path="/" component={Landing} />
 				<Route exact path="/lostItems" render={(props) => <LostItems {...props} data={data} />} />
 				<Route exact path="/foundItems" render={(props) => <FoundItems {...props} dataf={dataf} />} />
+				<Route exact path="/claim" render={(props) => <ClaimForm {...props} dataf={dataf} />} />
 				<Route
 					exact
 					path="/addLost"

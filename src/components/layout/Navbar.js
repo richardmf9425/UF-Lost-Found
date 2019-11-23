@@ -24,6 +24,7 @@ function Navbar() {
 					<Link to="/">
 						<div className="logo" />
 					</Link>
+					<div className="gator-logo" />
 					<span className="slogan">Lost and Found</span>
 					<div href="" className="login" onClick={handleShow}>
 						{login ? (
