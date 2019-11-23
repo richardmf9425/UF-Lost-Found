@@ -35,7 +35,7 @@ input:focus, select:focus, textarea:focus, button:focus {
 	top: 5px;
 	font-size: 4rem;
 	color: rgb(219, 219, 219);
-	font-family: 'Acme', sans-serif;
+	font-family: inherit;
 }
 
 .search-form {
@@ -156,9 +156,9 @@ input:focus, select:focus, textarea:focus, button:focus {
 
 .add-section {
 	display: flex;
-	margin-top: 100px;
-	margin-bottom: -10px;
-	margin-left: 74%;
+	margin-top: 150px;
+	margin-bottom: -70px;
+	margin-left: 68%;
 	padding: 10px;
 }
 
@@ -177,6 +177,7 @@ input:focus, select:focus, textarea:focus, button:focus {
 
 .add-text {
 	color: #084b81;
+	font-size: 1rem;
 }
 
 .star-red {

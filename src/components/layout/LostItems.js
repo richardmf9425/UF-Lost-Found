@@ -114,7 +114,7 @@ function LostItems({ data }) {
 				</form>
 			</div>
 			<div className="add-section">
-				<h5 className="add-text">Don't see the item? Add it</h5>{' '}
+				<h6 className="add-text">Don't see the found item? Add it to 'Items Found'</h6>{' '}
 				<span>
 					<Link to="/addFound" className="">
 						<i class="fas fa-plus-circle add-icon" />
