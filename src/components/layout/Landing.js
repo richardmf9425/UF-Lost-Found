@@ -12,8 +12,8 @@ const id = require('../../resources/gator1_card_pop.png');
 function Landing() {
 	return (
 		<section className="landing">
-			<h1 className="text-large">Categories:</h1>
 			<div className="categories-section">
+				<h3 className="text-landing"> Filter Found Items by Category:</h3>
 				<div className="categories">
 					{/* <div className="category">
 						{' '}
@@ -23,7 +23,7 @@ function Landing() {
 					<div className="category" />
 					<div className="category" />
 					<div className="category" /> */}
-					<Card style={{ width: '18rem' }} className="shadow-lg  card-category">
+					<Card style={{ width: '18rem' }} className="shadow  card-category">
 						<Card.Img variant="top" src={booksImg} width="100" height="200" />
 						<Card.Body>
 							<Card.Title>Books</Card.Title>

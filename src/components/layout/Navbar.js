@@ -8,14 +8,20 @@ import { Link } from 'react-router-dom';
 function Navbar() {
 	const [ show, setShow ] = useState(false);
 	const [ login, setLogin ] = useState(false);
+	const [ user, setUser ] = useState('');
+	const [ username, setUsername ] = useState('');
 
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 	const handleLogin = () => setLogin(true);
+	const handleUser = (e) => {
+		setUser(e.target.value);
+	};
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		handleLogin();
 		handleClose();
+		setUsername(user.split('@')[0]);
 	};
 	return (
 		<div>
@@ -28,7 +34,11 @@ function Navbar() {
 					<span className="slogan">Lost and Found</span>
 					<div href="" className="login" onClick={handleShow}>
 						{login ? (
-							'Welcome, Richard'
+							<div>
+								{' '}
+								Welcome,{username} <i className="fas fa-sign-out-alt" />{' '}
+								<span onClick={() => setLogin(false)}>LOG OUT</span>
+							</div>
 						) : (
 							<div>
 								<i className="fas fa-sign-in-alt" /> <span>LOG IN</span>{' '}
@@ -65,7 +75,13 @@ function Navbar() {
 								{' '}
 								<b> UF Email address</b>
 							</Form.Label>
-							<Form.Control required type="email" placeholder="Enter email" />
+							<Form.Control
+								required
+								type="email"
+								value={user}
+								placeholder="Enter email"
+								onChange={(e) => handleUser(e)}
+							/>
 							<Form.Text className="text-muted">We'll never share your email with anyone else.</Form.Text>
 						</Form.Group>
 

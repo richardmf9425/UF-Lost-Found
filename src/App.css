@@ -90,10 +90,10 @@ input:focus, select:focus, textarea:focus, button:focus {
 	text-decoration: none;
 	right: 7%;
 	margin-top: -55px;
+	text-transform: capitalize;
 }
 
 .login:hover {
-	color: #e17838;
 	cursor: pointer;
 }
 
@@ -133,12 +133,18 @@ input:focus, select:focus, textarea:focus, button:focus {
 	height: 90vh;
 	width: 100%;
 	display: flex;
-	margin-top: 10%;
+	margin-top: 7vh;
 	align-items: center;
 	flex-direction: column;
+	background-color: #f8f8f8;
+}
+
+.text-landing {
+	text-align: center;
 }
 
 .categories-section {
+	margin-top: 50px;
 	display: grid;
 	justify-content: center;
 	align-items: center;
