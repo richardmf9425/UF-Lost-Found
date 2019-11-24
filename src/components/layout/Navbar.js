@@ -22,6 +22,10 @@ function Navbar() {
 		handleLogin();
 		handleClose();
 		setUsername(user.split('@')[0]);
+		setUser('');
+	};
+	const handleLogOut = () => {
+		setLogin(false);
 	};
 	return (
 		<div>
@@ -32,15 +36,14 @@ function Navbar() {
 					</Link>
 					<div className="gator-logo" />
 					<span className="slogan">Lost and Found</span>
-					<div href="" className="login" onClick={handleShow}>
+					<div href="" className="login">
 						{login ? (
-							<div>
+							<div onClick={() => handleLogOut()}>
 								{' '}
-								Welcome,{username} <i className="fas fa-sign-out-alt" />{' '}
-								<span onClick={() => setLogin(false)}>LOG OUT</span>
+								Welcome,{username} <i className="fas fa-sign-out-alt" /> <span>LOG OUT</span>
 							</div>
 						) : (
-							<div>
+							<div onClick={handleShow}>
 								<i className="fas fa-sign-in-alt" /> <span>LOG IN</span>{' '}
 							</div>
 						)}
