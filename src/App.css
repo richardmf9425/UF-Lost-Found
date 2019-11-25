@@ -353,3 +353,127 @@ td:hover {
 .claim-text-small {
 	font-size: x-small;
 }
+
+/* FAQ */
+
+.FAQ-section {
+	position: relative;
+	height: 80vh;
+	width: 100%;
+	/* background: url('./resources/landing-rock.jpg') no-repeat center center/cover; */
+	/* background-color: #343a40; */
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 8vh;
+}
+
+.container-faq {
+	margin-top: -90px;
+	padding: 4rem;
+	width: 48rem;
+}
+
+.faq-header {
+	font-size: 2.25rem;
+	color: #094b81;
+	padding: 1.3rem;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.accordion a {
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	width: 100%;
+	padding: 1rem 3rem 1rem 1rem;
+	color: #e17838;
+	font-size: 1.15rem;
+	font-weight: 400;
+	border-bottom: 1px solid #e17838;
+}
+
+.accordion a:hover, .accordion a:hover::after {
+	cursor: pointer;
+	color: #094b81;
+	border-bottom: 1px solid #094b81;
+}
+
+.accordion .accordion-item a:hover {
+	color: #094b81;
+}
+
+.accordion a:hover::after {
+	border: 1px solid #094b81;
+}
+
+.accordion a.active {
+	color: #094b81;
+	border-bottom: 1px solid #094b81;
+}
+
+.accordion a::after {
+	font-family: 'Ionicons';
+	content: '\f218';
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	float: right;
+	right: 1rem;
+	font-size: 1rem;
+	color: #e17838;
+	padding: 5px;
+	width: 30px;
+	height: 30px;
+	bottom: 15px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	border: 1px solid #e17838;
+	/* text-align: center; */
+}
+
+.accordion a.active::after {
+	font-family: 'Ionicons';
+	content: '\f209';
+	color: #094b81;
+	border: 1px solid #094b81;
+}
+
+.accordion .content {
+	opacity: 0;
+	padding: 0 1rem;
+	max-height: 0;
+	border-bottom: 1px solid #094b81;
+	overflow: hidden;
+	clear: both;
+	-webkit-transition: all 0.2s ease 0.15s;
+	-o-transition: all 0.2s ease 0.15s;
+	transition: all 0.2s ease 0.15s;
+}
+
+.accordion .content p {
+	font-size: 1rem;
+	font-weight: 300;
+}
+
+.accordion .content.active {
+	opacity: 1;
+	padding: 1rem;
+	max-height: 120px;
+	-webkit-transition: all 0.35s ease 0.15s;
+	-o-transition: all 0.35s ease 0.15s;
+	transition: all 0.35s ease 0.15s;
+}

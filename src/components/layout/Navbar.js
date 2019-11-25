@@ -59,11 +59,11 @@ function Navbar() {
 					</li>
 					<li>
 						{' '}
-						<a href="">FAQ</a>{' '}
+						<Link to="/faq">FAQ</Link>{' '}
 					</li>
 					<li>
 						{' '}
-						<a href="">Customer Support</a>{' '}
+						<Link to="/contact">Customer Support</Link>{' '}
 					</li>
 				</div>
 			</nav>
