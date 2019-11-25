@@ -17,6 +17,7 @@ function FoundItems({ dataf, categ }) {
 	const [ location, setLocation ] = useState('');
 	const [ category, setCategory ] = useState(categ);
 	const [ searchText, setSearchText ] = useState('');
+	const [ remove, setDelete ] = useState(false);
 
 	const handleClose = () => setShow(false);
 	const handleShow = (item) => {
@@ -37,6 +38,22 @@ function FoundItems({ dataf, categ }) {
 	}
 	if (category) {
 		dataf = dataf.filter((item) => item.category === category);
+	}
+	const handleDelete = (el) => {
+		setDelete(true);
+		handleClose();
+		toast.info('Post Deleted Successfully', {
+			bodyClassName: 'toast-background',
+			position: 'top-left',
+			autoClose: 4000,
+			hideProgressBar: true,
+			closeOnClick: true,
+			pauseOnHover: false,
+			draggable: true
+		});
+	};
+	if (remove) {
+		dataf = dataf.filter((elem) => elem.id !== item.id);
 	}
 
 	if (searchText) {
@@ -107,6 +124,7 @@ function FoundItems({ dataf, categ }) {
 	};
 	const onCategorySelect = (category) => setCategory(category.value);
 	const onLocationSelect = (location) => setLocation(location.value);
+
 	return (
 		<Fragment>
 			<div className="search-section">
@@ -195,13 +213,13 @@ function FoundItems({ dataf, categ }) {
 			<Modal show={show} onHide={handleClose}>
 				<Modal.Header closeButton>
 					<Modal.Title>
-						Lost Item: <br /> <span className="modal-text">{item.title}</span>
+						Found Item: <br /> <span className="modal-text">{item.title}</span>
 					</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
 					{' '}
 					<h3>Description:</h3> <p className="modal-text">{item.description}</p>
-					<h3>Area Lost:</h3> <span className="modal-text">{item.location}</span>
+					<h3>Area Found:</h3> <span className="modal-text">{item.location}</span>
 				</Modal.Body>
 				<Modal.Footer className="modal-footer">
 					<Form onSubmit={handleSubmit}>
@@ -209,14 +227,15 @@ function FoundItems({ dataf, categ }) {
 							{' '}
 							<b>Is this item yours?</b>{' '}
 						</Form.Label>
-						{/* <Form.Control required type="email" placeholder="Enter preferred contact info" />
-						<Form.Text className="text-muted">
-							We'll never share your information with anyone else.
-						</Form.Text> */}
-
-						<Link className="login-button modal-button" to="/claim">
-							Claim Item
-						</Link>
+						{`${item.id}`.length > 10 ? (
+							<button type="button" className="delete-button" onClick={() => handleDelete(item)}>
+								Delete Post
+							</button>
+						) : (
+							<Link className="login-button modal-button" to="/claim">
+								Claim Item
+							</Link>
+						)}
 					</Form>
 				</Modal.Footer>
 			</Modal>
