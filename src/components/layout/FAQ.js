@@ -15,62 +15,55 @@ function FAQ() {
 				<div className="accordion">
 					<div className="accordion-item">
 						<a onClick={() => toggleActive(!active)} className={active ? 'active' : ''}>
-							I don't know what to add here
+							What should I do if I find a lost item?
 						</a>
 						<div className={active ? ' content active' : 'content'}>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut
-								tortor pretium viverra suspendisse potenti.
+								If you find a lost item, you should go the the 'Items Lost' list, and check to see if
+								someone has submitted a post, if not then you should add it to the 'Items Found' List
+								and just give a brief description without giving away any details.
 							</p>
 						</div>
 					</div>
 					<div className="accordion-item">
 						<a onClick={() => toggleActive1(!active1)} className={active1 ? 'active' : ''}>
-							Why is the sky blue?
+							How do I claim a lost item?
 						</a>
 						<div className={active1 ? ' content active' : 'content'}>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut
-								tortor pretium viverra suspendisse potenti.
+								Click on the item and fill out the Claim Form, the person who found it should contact
+								you soon.
 							</p>
 						</div>
 					</div>
 					<div className="accordion-item">
 						<a onClick={() => toggleActive2(!active2)} className={active2 ? 'active' : ''}>
-							Why is the sky blue?
+							What if someone else claimed my item before me?
 						</a>
 						<div className={active2 ? ' content active' : 'content'}>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut
-								tortor pretium viverra suspendisse potenti.
+								All claims are stored in the UF database and any concerns can be directed to the
+								Gainsville PD.
 							</p>
 						</div>
 					</div>
 					<div className="accordion-item">
 						<a onClick={() => toggleActive3(!active3)} className={active3 ? 'active' : ''}>
-							Why is the sky blue?
+							What if no one claims the item I found?
 						</a>
 						<div className={active3 ? ' content active' : 'content'}>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut
-								tortor pretium viverra suspendisse potenti.
+								Posts are automatically deleted after 45 days, if by this time no one has claimed it,
+								you have the right to keep it.
 							</p>
 						</div>
 					</div>
 					<div className="accordion-item">
 						<a onClick={() => toggleActive4(!active4)} className={active4 ? 'active' : ''}>
-							Why is the sky blue?
+							How safe is this?
 						</a>
 						<div className={active4 ? ' content active' : 'content'}>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut
-								tortor pretium viverra suspendisse potenti.
-							</p>
+							<p>Super safe.</p>
 						</div>
 					</div>
 				</div>
