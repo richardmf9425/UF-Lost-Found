@@ -54,7 +54,17 @@ function AddLostForm({ data, addItem }) {
 
 	const colorOptions = [ 'Yellow', 'Black', 'Blue', 'Green', 'White' ];
 	const locationOptions = [ 'Marston', 'CISE', 'Reitz', 'Other' ];
-	const categoryOptions = [ 'Books', 'Phones', 'Accessories', 'Emergency', 'ID', 'Other' ];
+	const categoryOptions = [
+		'Books',
+		'Electronics',
+		'Clothing',
+		'Accessories',
+		'Identification',
+		'Medical Items',
+		'Keys',
+		'Wallets',
+		'Other'
+	];
 	return (
 		<div className="lost-section card shadow-lg p-3 mb-5 bg-white rounded">
 			<h3> Add Lost Item:</h3>
