@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 const booksImg = require('../../resources/pile-of-five-books-51342.jpg');
 const phoneImg = require('../../resources/apple-applications-apps-cell-phone-607812.jpg');
 const clothing = require('../../resources/assorted-clothes-996329.jpg');
@@ -9,28 +10,25 @@ const medical = require('../../resources/blue-and-silver-stetoscope-40568.jpg');
 const keys = require('../../resources/two-black-and-brass-colored-keys-with-fob-842528.jpg');
 const wallet = require('../../resources/brown-leather-wallet-and-us-dollar-banknote-915915.jpg');
 const id = require('../../resources/gator1_card_pop.png');
-function Landing() {
+function Landing({ setCateg }) {
 	return (
 		<section className="landing">
 			<div className="categories-section">
 				<h3 className="text-landing"> Filter Found Items by Category:</h3>
 				<div className="categories">
-					{/* <div className="category">
-						{' '}
-						<span className="text-category">Books</span>{' '}
-					</div>
-					<div className="category" />
-					<div className="category" />
-					<div className="category" />
-					<div className="category" /> */}
 					<Card style={{ width: '18rem' }} className="shadow  card-category">
 						<Card.Img variant="top" src={booksImg} width="100" height="200" />
 						<Card.Body>
 							<Card.Title>Books</Card.Title>
 							<Card.Text>Books, notebook, binders, paper, etc..</Card.Text>
-							<Button variant="primary" className="login-button">
+							<Link
+								variant="primary"
+								className="login-button landing-button"
+								to="/foundItems"
+								onClick={() => setCateg('Books')}
+							>
 								Search
-							</Button>
+							</Link>
 						</Card.Body>
 					</Card>
 					<Card style={{ width: '18rem' }} className="shadow card-category">
@@ -38,9 +36,14 @@ function Landing() {
 						<Card.Body>
 							<Card.Title>Electronics</Card.Title>
 							<Card.Text>Phones, laptops, headphones, chargers, etc..</Card.Text>
-							<Button variant="primary" className="login-button">
+							<Link
+								variant="primary"
+								className="login-button landing-button"
+								to="/foundItems"
+								onClick={() => setCateg('Electronics')}
+							>
 								Search
-							</Button>
+							</Link>
 						</Card.Body>
 					</Card>
 					<Card style={{ width: '18rem' }} className="shadow card-category">
@@ -48,9 +51,14 @@ function Landing() {
 						<Card.Body>
 							<Card.Title>Clothing</Card.Title>
 							<Card.Text>Shirts,hoodies,coats, hats, shoes, etc..</Card.Text>
-							<Button variant="info" className="login-button">
+							<Link
+								variant="info"
+								className="login-button landing-button"
+								to="/foundItems"
+								onClick={() => setCateg('Clothing')}
+							>
 								Search
-							</Button>
+							</Link>
 						</Card.Body>
 					</Card>
 					<Card style={{ width: '18rem' }} className="shadow card-category">
@@ -58,9 +66,14 @@ function Landing() {
 						<Card.Body>
 							<Card.Title>Accessories</Card.Title>
 							<Card.Text>Umbrellas, glasses, backpacks, etc..</Card.Text>
-							<Button variant="primary" className="login-button">
+							<Link
+								variant="primary"
+								className="login-button landing-button"
+								to="/foundItems"
+								onClick={() => setCateg('Accessories')}
+							>
 								Search
-							</Button>
+							</Link>
 						</Card.Body>
 					</Card>
 				</div>
@@ -70,9 +83,14 @@ function Landing() {
 						<Card.Body>
 							<Card.Title>Medical Items</Card.Title>
 							<Card.Text>Inhalers, medication, prescriptions, etc..</Card.Text>
-							<Button variant="primary" className="login-button">
+							<Link
+								variant="primary"
+								className="login-button landing-button"
+								to="/foundItems"
+								onClick={() => setCateg('Medical Items')}
+							>
 								Search
-							</Button>
+							</Link>
 						</Card.Body>
 					</Card>
 					<Card style={{ width: '18rem' }} className="shadow card-category">
@@ -80,9 +98,14 @@ function Landing() {
 						<Card.Body>
 							<Card.Title>Keys</Card.Title>
 							<Card.Text>Keys, car keys, keychains,carabiners, etc...</Card.Text>
-							<Button variant="primary" className="login-button">
+							<Link
+								variant="primary"
+								className="login-button landing-button"
+								to="/foundItems"
+								onClick={() => setCateg('Keys')}
+							>
 								Search
-							</Button>
+							</Link>
 						</Card.Body>
 					</Card>
 					<Card style={{ width: '18rem' }} className="shadow card-category">
@@ -90,9 +113,14 @@ function Landing() {
 						<Card.Body>
 							<Card.Title>Wallets</Card.Title>
 							<Card.Text>Wallets, purses, bags, money, etc..</Card.Text>
-							<Button variant="primary" className="login-button">
+							<Link
+								variant="primary"
+								className="login-button landing-button"
+								to="/foundItems"
+								onClick={() => setCateg('Wallets')}
+							>
 								Search
-							</Button>
+							</Link>
 						</Card.Body>
 					</Card>
 					<Card style={{ width: '18rem' }} className="shadow card-category">
@@ -100,9 +128,14 @@ function Landing() {
 						<Card.Body>
 							<Card.Title>Identification</Card.Title>
 							<Card.Text>Driver's License, UF ID, any other ID card, etc..</Card.Text>
-							<Button variant="primary" className="login-button">
+							<Link
+								variant="primary"
+								className="login-button landing-button"
+								to="/foundItems"
+								onClick={() => setCateg('Identification')}
+							>
 								Search
-							</Button>
+							</Link>
 						</Card.Body>
 					</Card>
 				</div>

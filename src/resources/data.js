@@ -25,7 +25,7 @@ export default [
 			'Blue hydroflask bottle with a nasa sticker in the front, middle size, left it in E221 room in the CISE building',
 		color: 'Blue',
 		location: 'Marston',
-		category: 'Bottles',
+		category: 'Accessories',
 		date: '01/10/2019'
 	},
 	{
@@ -35,7 +35,7 @@ export default [
 			'Linear Algebra book, white and green cover with some numbers, also has a barcode sticker on the back from thriftbooks',
 		color: 'White',
 		location: 'NEB',
-		category: 'Book',
+		category: 'Books',
 		date: '07/11/2019'
 	},
 	{
@@ -44,7 +44,7 @@ export default [
 		description: 'UF ID John Doe, UFID number 888 88888 and my pic in the front. blah blah blah blah',
 		color: 'White',
 		location: 'Marston',
-		category: 'ID',
+		category: 'Identification',
 		date: '09/23/2019'
 	}
 ];

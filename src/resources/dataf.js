@@ -41,7 +41,7 @@ export default [
 		description: 'United Health Insurance Card',
 		color: 'White',
 		location: 'Marston',
-		category: 'ID',
+		category: 'Identification',
 		date: '09/23/2019'
 	}
 ];

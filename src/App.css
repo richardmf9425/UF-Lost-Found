@@ -7,7 +7,10 @@
 	font-family: Roboto, Arial, sans-serif;
 }
 
-input:focus, select:focus, textarea:focus, button:focus {
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
 	outline: none;
 }
 
@@ -237,6 +240,19 @@ td:hover {
 	width: 140px;
 }
 
+.landing-button {
+	padding: 12px;
+	border-radius: 5px;
+	color: #fff;
+	margin: 5px;
+
+}
+
+.landing-button:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
 .clear-button {
 	margin-top: 10px;
 	margin-left: 80px;
@@ -300,7 +316,9 @@ td:hover {
 	margin: 15px;
 }
 
-.lost-form input[type=text], input[type=email], input[type=password] {
+.lost-form input[type=text],
+input[type=email],
+input[type=password] {
 	border: none;
 	border-bottom: 1px solid #fd6100;
 }
@@ -404,7 +422,8 @@ td:hover {
 	border-bottom: 1px solid #e17838;
 }
 
-.accordion a:hover, .accordion a:hover::after {
+.accordion a:hover,
+.accordion a:hover::after {
 	cursor: pointer;
 	color: #094b81;
 	border-bottom: 1px solid #094b81;
@@ -481,6 +500,7 @@ td:hover {
 /* Contact */
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
 #feedback-page {
 	text-align: center;
 }
@@ -591,7 +611,10 @@ textarea {
 	line-height: 150%;
 }
 
-input:hover, textarea:hover, input:focus, textarea:focus {
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
 	background-color: white;
 }
 

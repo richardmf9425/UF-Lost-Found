@@ -16,16 +16,22 @@ import Contact from './components/layout/Contact';
 function App() {
 	const [ data, setData ] = useState(list);
 	const [ dataf, setDataf ] = useState(listf);
+	const [ categ, setCateg ] = useState('');
 
 	const addItem = (newList) => setData(newList);
 	const addItemf = (newListf) => setDataf(newListf);
+
 	return (
 		<Router>
 			<div>
 				<Navbar />
-				<Route exact path="/" component={Landing} />
+				<Route exact path="/" render={(props) => <Landing {...props} setCateg={setCateg} />} />
 				<Route exact path="/lostItems" render={(props) => <LostItems {...props} data={data} />} />
-				<Route exact path="/foundItems" render={(props) => <FoundItems {...props} dataf={dataf} />} />
+				<Route
+					exact
+					path="/foundItems"
+					render={(props) => <FoundItems {...props} dataf={dataf} categ={categ} />}
+				/>
 				<Route exact path="/claim" render={(props) => <ClaimForm {...props} dataf={dataf} />} />
 				<Route exact path="/faq" component={FAQ} />
 				<Route exact path="/contact" component={Contact} />

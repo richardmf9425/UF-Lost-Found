@@ -9,13 +9,13 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom';
 toast.configure();
-function FoundItems({ dataf }) {
+function FoundItems({ dataf, categ }) {
 	const [ show, setShow ] = useState(false);
 	const [ item, setItem ] = useState({});
 	const [ newest, setNewest ] = useState(true);
 	const [ color, setColor ] = useState('');
 	const [ location, setLocation ] = useState('');
-	const [ category, setCategory ] = useState('');
+	const [ category, setCategory ] = useState(categ);
 	const [ searchText, setSearchText ] = useState('');
 
 	const handleClose = () => setShow(false);
