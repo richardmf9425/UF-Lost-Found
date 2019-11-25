@@ -40,7 +40,7 @@ function Navbar() {
 						{login ? (
 							<div onClick={() => handleLogOut()}>
 								{' '}
-								Welcome,{username} <i className="fas fa-sign-out-alt" /> <span>LOG OUT</span>
+								Welcome, {username} <i className="fas fa-sign-out-alt" /> <span>LOG OUT</span>
 							</div>
 						) : (
 							<div onClick={handleShow}>

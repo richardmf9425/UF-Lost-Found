@@ -46,6 +46,7 @@ function Contact() {
 							name="name"
 							type="text"
 							value={name}
+							required
 							class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"
 							placeholder="Name"
 							id="name"
@@ -58,6 +59,7 @@ function Contact() {
 							name="email"
 							value={email}
 							type="text"
+							required
 							class="validate[required,custom[email]] feedback-input"
 							id="email"
 							placeholder="Email"
@@ -72,6 +74,7 @@ function Contact() {
 							class=" feedback-input"
 							id="comment"
 							placeholder="Comment"
+							required
 							onChange={(e) => onChange(e)}
 						/>
 					</p>
