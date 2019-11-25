@@ -83,7 +83,17 @@ function FoundItems({ dataf }) {
 
 	const locationOptions = [ 'Marston', 'CISE', 'Reitz', 'Campus', 'Other' ];
 
-	const categoryOptions = [ 'Books', 'Phones', 'Emergency', 'Accessories', 'ID', 'Other' ];
+	const categoryOptions = [
+		'Books',
+		'Electronics',
+		'Clothing',
+		'Accessories',
+		'Identification',
+		'Medical Items',
+		'Keys',
+		'Wallets',
+		'Other'
+	];
 
 	const dateOptions = [ 'Newest', 'Oldest' ];
 	const defaultDateOption = dateOptions[0];
