@@ -43,7 +43,7 @@ function FAQ() {
 						<div className={active2 ? ' content active' : 'content'}>
 							<p>
 								All claims are stored in the UF database and any concerns can be directed to the
-								Gainsville PD.
+								Gainsville PD or UF Honor Court.
 							</p>
 						</div>
 					</div>
