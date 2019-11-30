@@ -31,8 +31,8 @@ function FAQ() {
 						</a>
 						<div className={active1 ? ' content active' : 'content'}>
 							<p>
-								Click on the item and fill out the Claim Form, the person who found it should contact
-								you soon.
+								Once you find the item in the listing, you can click on it and fill out the Claim Form,
+								the person who found it should contact you soon.
 							</p>
 						</div>
 					</div>
