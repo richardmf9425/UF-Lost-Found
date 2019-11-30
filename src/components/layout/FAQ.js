@@ -20,8 +20,8 @@ function FAQ() {
 						<div className={active ? ' content active' : 'content'}>
 							<p>
 								If you find a lost item, you should go the the 'Items Lost' list, and check to see if
-								someone has submitted a post, if not then you should add it to the 'Items Found' List
-								and just give a brief description without giving away any details.
+								someone has submitted a post, if not, then you should add it to the 'Items Found' List
+								and just provide a brief description without giving away any details.
 							</p>
 						</div>
 					</div>
