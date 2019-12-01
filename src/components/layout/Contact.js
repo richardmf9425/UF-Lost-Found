@@ -73,7 +73,7 @@ function Contact() {
 							value={comment}
 							class=" feedback-input"
 							id="comment"
-							placeholder="Comment"
+							placeholder="Message"
 							required
 							onChange={(e) => onChange(e)}
 						/>
