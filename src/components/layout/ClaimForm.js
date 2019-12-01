@@ -14,11 +14,11 @@ function ClaimForm() {
 	const [ formInfo, setFormInfo ] = useState({
 		title: '',
 		description: '',
-        location: '',
-        picture:'',
+		location: '',
+		picture: '',
 		contact: ''
 	});
-	const { title, description, location,picture, contact } = formInfo;
+	const { title, description, location, picture, contact } = formInfo;
 
 	const onSubmit = (e) => {
 		e.preventDefault();
@@ -34,16 +34,16 @@ function ClaimForm() {
 		});
 		setFireRedirect(true);
 		const email = {
-            title,
-            description,
-            location,
-            picture,
-            contact
+			title,
+			description,
+			location,
+			picture,
+			contact
 		};
 		axios.post('https://www.enformed.io/awrr3hsj', email);
-    };
-    
-    const onChange = (e) => setFormInfo({ ...formInfo, [e.target.name]: e.target.value });
+	};
+
+	const onChange = (e) => setFormInfo({ ...formInfo, [e.target.name]: e.target.value });
 
 	return (
 		<div className="lost-section card shadow-lg p-3 mb-5 bg-white rounded">
@@ -51,7 +51,15 @@ function ClaimForm() {
 			<form className="lost-form" onSubmit={(e) => onSubmit(e)}>
 				<div className="form-group">
 					<label htmlFor="title">Item: </label>
-					<input id="title" type="text" name="title" value={title} required placeholder="Coffee mug" onChange={(e) => onChange(e)}/>
+					<input
+						id="title"
+						type="text"
+						name="title"
+						value={title}
+						required
+						placeholder="Coffee mug"
+						onChange={(e) => onChange(e)}
+					/>
 				</div>
 				<div className="form-group">
 					<label htmlFor="description">Item Description: </label>
@@ -59,22 +67,38 @@ function ClaimForm() {
 						<span className="star-red">*</span> Please provide as many details as possible to verify you as
 						the legitimate owner
 					</p>
-					<textarea id="description" name="description" value={description} required type="text-area" placeholder="E.g Jacket" onChange={(e) => onChange(e)} />
+					<textarea
+						id="description"
+						name="description"
+						value={description}
+						required
+						type="text-area"
+						placeholder="E.g Jacket"
+						onChange={(e) => onChange(e)}
+					/>
 				</div>
 
 				<div className="form-group">
 					<label htmlFor="location">Where did you lose this item? </label>
-					<input type="text" name="location" value={location} onChange={(e) => onChange(e)}/>
+					<input type="text" name="location" value={location} onChange={(e) => onChange(e)} />
 				</div>
 				<div className="form-group">
 					<p style={{ fontSize: 'small' }}>
-						Do you have any pictures that can help confirm you are the owner?{' '}
+						Do you have any pictures that can help confirming you are the owner?{' '}
 					</p>
-					<input id="category" name="picture" value={picture} type="file" onChange={(e) => onChange(e)}/>
+					<input id="category" name="picture" value={picture} type="file" onChange={(e) => onChange(e)} />
 				</div>
 				<div className="form-group">
 					<label htmlFor="email">Preferred contact info: </label>
-					<input id="color" type="text" name="contact" value={contact} required placeholder="john@doe.com" onChange={(e) => onChange(e)} />
+					<input
+						id="color"
+						type="text"
+						name="contact"
+						value={contact}
+						required
+						placeholder="john@doe.com"
+						onChange={(e) => onChange(e)}
+					/>
 				</div>
 				<p className="claim-text-small text-muted">
 					The information from this form will be sent to the person who found the item being claimed.
