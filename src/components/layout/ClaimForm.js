@@ -101,7 +101,7 @@ function ClaimForm() {
 					/>
 				</div>
 				<p className="claim-text-small text-muted">
-					The information from this form will be sent to the person who found the item being claimed.
+					The information from this form will be only sent to the person who found the item being claimed.
 				</p>
 				<div className="form-buttons">
 					<Link to="/lostItems" className="login-button add-lost-button cancel-button">
