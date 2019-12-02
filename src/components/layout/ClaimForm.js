@@ -96,7 +96,7 @@ function ClaimForm() {
 						name="contact"
 						value={contact}
 						required
-						placeholder="john@doe.com"
+						placeholder="john@ufl.edu"
 						onChange={(e) => onChange(e)}
 					/>
 				</div>
