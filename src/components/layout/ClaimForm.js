@@ -89,7 +89,7 @@ function ClaimForm() {
 					<input id="category" name="picture" value={picture} type="file" onChange={(e) => onChange(e)} />
 				</div>
 				<div className="form-group">
-					<label htmlFor="email">Preferred contact info: </label>
+					<label htmlFor="email">Preferred contact email: </label>
 					<input
 						id="color"
 						type="text"
