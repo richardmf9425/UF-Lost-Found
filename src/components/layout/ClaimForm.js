@@ -92,7 +92,7 @@ function ClaimForm() {
 					<label htmlFor="email">Preferred contact email: </label>
 					<input
 						id="color"
-						type="text"
+						type="email"
 						name="contact"
 						value={contact}
 						required
