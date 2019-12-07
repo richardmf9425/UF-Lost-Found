@@ -642,6 +642,8 @@ input:hover, textarea:hover, input:focus, textarea:focus {
 	background-color: rgb(156, 30, 30);
 }
 
+/* Mobile view */
+
 @media only screen and (max-width: 580px) {
 	#form-div {
 		left: 3%;
